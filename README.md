@@ -6,4 +6,4 @@ It is entirely self-contained in one file. No external Javascript libraries or C
 if you download a local copy.
 
 The idea for this came from one day I needed to sketch on a Smartboard for one of my classes. I was able to kludge a grid by finding
-an online PDF intended for printing graph paper on-demand and magnifying it.
+an online PDF intended for printing graph paper on-demand and magnifying it. Hopefully this is a slightly-more-refined solution.
