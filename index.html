@@ -38,11 +38,18 @@
     }
     
     function getSize() {
-        return parseInt(document.getElementById("sizeSelector").value);
+        return parseInt(document.getElementById("sizeSpinner").value);
     }
     
     function getColor() {
         return document.getElementById("lineColor").value;
+    }
+    
+    function updateSpinner() {
+        var val = document.getElementById("sizeSelector").value;
+        var spinner = document.getElementById("sizeSpinner");
+        spinner.value = val;
+        redraw();
     }
 </script>
 
@@ -54,11 +61,13 @@
     <div id="controls" style="white-space: nowrap">
         <div id="sizingControls" style="display: inline-block; margin:10px">
             Grid Size
-            <select id="sizeSelector" onchange="redraw()">
+            <select id="sizeSelector" onchange="updateSpinner()">
                 <option value="50">Large</option>
                 <option value="30">Medium</option>
                 <option value="10">Small</option>
             </select>
+            or
+            <input id="sizeSpinner" type="number" min="5" max="100" step="5" value="50" size="3" onchange="redraw()">
         </div>
         
         <div id="colorControls" style="display: inline-block; margin:10px">
