@@ -19,6 +19,13 @@
             ctx.lineTo(x,height);
             ctx.stroke();
         }
+        
+        // draw horizontal lines
+        for (y = 0; y < height; y += gridSize) {
+            ctx.moveTo(0,y);
+            ctx.lineTo(width, y);
+            ctx.stroke();
+        }
     }
 </script>
 
