@@ -10,7 +10,6 @@
     
     function drawGraphLines(gridSize) {
         var canvas = document.getElementById("graphpaper");
-        var grapharea = document.getElementById("grapharea");
         var ctx = canvas.getContext("2d");
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
@@ -34,8 +33,8 @@
 
 </head>
 <body>
-    <div id="grapharea" style="width:100%; height:100vh">
-        <canvas id="graphpaper" ></canvas>
-    </div>
+
+    <canvas id="graphpaper" ></canvas>
+
 </body>
 </html>
