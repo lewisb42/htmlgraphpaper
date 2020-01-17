@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 
 <script>
-    $(document).ready(function() {
+    document.addEventListener("DOMContentLoaded", function() {
         drawGraphLines(50, "CornflowerBlue");
     });
     
@@ -51,8 +51,8 @@
 
     
 
-    <div id="controls">
-        <div id="sizingControls">
+    <div id="controls" style="white-space: nowrap">
+        <div id="sizingControls" style="display: inline-block; margin:10px">
             Grid Size
             <select id="sizeSelector" onchange="redraw()">
                 <option value="50">Large</option>
@@ -61,7 +61,7 @@
             </select>
         </div>
         
-        <div id="colorControls">
+        <div id="colorControls" style="display: inline-block; margin:10px">
             Line Color
             <select id="lineColor" onchange="redraw()">
                 <option value="CornflowerBlue">Cornflower Blue</option>
@@ -69,6 +69,10 @@
                 <option value="DarkSeaGreen">Dark Sea Green</option>
                 <option value="Black">Black</option>
             </select>
+        </div>
+        
+        <div id="credits" style="display: inline-block; margin:10px; float:right">
+            author: <a href="https://github.com/lewisb42">Lewis Baumstark</a>
         </div>
     </div>
     
