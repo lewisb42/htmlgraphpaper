@@ -9,23 +9,17 @@
     });
     
     function drawGraphLines() {
-        var line = $( "<line />" );
-        line.attr({
-            x1: "0",
-            y1: "0",
-            x2: "200",
-            y2: "200",
-            style: "stroke:rgb(255,0,0);stroke-width:2"
-        });
-        $( "#graphpaper" ).append(line);
-        //$( "body" ).append( $( "<h1></h1>" ).text("hello") );
+        var canvas = document.getElementById("graphpaper");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0, 0, 150, 75);
     }
 </script>
 
 </head>
 <body>
-    <svg id="graphpaper">
+    <canvas id="graphpaper">
     
-    </svg>
+    </canvas>
 </body>
 </html>
