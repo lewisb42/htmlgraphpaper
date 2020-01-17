@@ -5,14 +5,17 @@
 
 <script>
     $(document).ready(function() {
-        drawGraphLines();
+        drawGraphLines(20);
     });
     
-    function drawGraphLines() {
+    function drawGraphLines(gridSize) {
         var canvas = document.getElementById("graphpaper");
         var ctx = canvas.getContext("2d");
-        ctx.fillStyle = "#FF0000";
-        ctx.fillRect(0, 0, 150, 75);
+        var width = canvas.width;
+        var height = canvas.height;
+        ctx.moveTo(0,0);
+        ctx.lineTo(0,height);
+        ctx.stroke()
     }
 </script>
 
