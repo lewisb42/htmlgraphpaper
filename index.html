@@ -5,12 +5,15 @@
 
 <script>
     $(document).ready(function() {
-        drawGraphLines(20);
+        drawGraphLines(50);
     });
     
     function drawGraphLines(gridSize) {
         var canvas = document.getElementById("graphpaper");
+        var grapharea = document.getElementById("grapharea");
         var ctx = canvas.getContext("2d");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
         var width = canvas.width;
         var height = canvas.height;
         // draw vertical lines
@@ -31,8 +34,8 @@
 
 </head>
 <body>
-    <canvas id="graphpaper">
-    
-    </canvas>
+    <div id="grapharea" style="width:100%; height:100vh">
+        <canvas id="graphpaper" ></canvas>
+    </div>
 </body>
 </html>
