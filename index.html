@@ -5,14 +5,15 @@
 
 <script>
     $(document).ready(function() {
-        drawGraphLines(50);
+        drawGraphLines(50, "DarkGray");
     });
     
-    function drawGraphLines(gridSize) {
+    function drawGraphLines(gridSize, color) {
         var canvas = document.getElementById("graphpaper");
         var ctx = canvas.getContext("2d");
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
+        ctx.strokeStyle = color;
         var width = canvas.width;
         var height = canvas.height;
         // draw vertical lines
@@ -30,9 +31,18 @@
         }
     }
     
-    function resizeGrid() {
-        var size = parseInt(document.getElementById("sizeSelector").value);
-        drawGraphLines(size);
+    function redraw() {
+        var color = getColor();
+        var size = getSize();
+        drawGraphLines(size, color);
+    }
+    
+    function getSize() {
+        return parseInt(document.getElementById("sizeSelector").value);
+    }
+    
+    function getColor() {
+        return document.getElementById("lineColor").value;
     }
 </script>
 
@@ -42,12 +52,22 @@
     
 
     <div id="controls">
-        <div id="sizing_controls">
+        <div id="sizingControls">
             Grid Size
-            <select id="sizeSelector" onchange="resizeGrid()">
+            <select id="sizeSelector" onchange="redraw()">
                 <option value="10">Small</option>
                 <option value="30">Medium</option>
                 <option value="50">Large</option>
+            </select>
+        </div>
+        
+        <div id="colorControls">
+            Line Color
+            <select id="lineColor" onchange="redraw()">
+                <option value="CornflowerBlue">Cornflower Blue</option>
+                <option value="DarkGray">Dark Gray</option>
+                <option value="DarkSeaGreen">Dark Sea Green</option>
+                <option value="Black">Black</option>
             </select>
         </div>
     </div>
