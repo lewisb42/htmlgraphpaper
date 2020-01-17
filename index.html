@@ -5,7 +5,7 @@
 
 <script>
     $(document).ready(function() {
-        drawGraphLines(50, "DarkGray");
+        drawGraphLines(50, "CornflowerBlue");
     });
     
     function drawGraphLines(gridSize, color) {
@@ -55,9 +55,9 @@
         <div id="sizingControls">
             Grid Size
             <select id="sizeSelector" onchange="redraw()">
-                <option value="10">Small</option>
-                <option value="30">Medium</option>
                 <option value="50">Large</option>
+                <option value="30">Medium</option>
+                <option value="10">Small</option>
             </select>
         </div>
         
