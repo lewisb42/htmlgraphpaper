@@ -29,12 +29,29 @@
             ctx.stroke();
         }
     }
+    
+    function resizeGrid() {
+        var size = parseInt(document.getElementById("sizeSelector").value);
+        drawGraphLines(size);
+    }
 </script>
 
 </head>
 <body>
 
-    <canvas id="graphpaper" ></canvas>
+    
 
+    <div id="controls">
+        <div id="sizing_controls">
+            Grid Size
+            <select id="sizeSelector" onchange="resizeGrid()">
+                <option value="10">Small</option>
+                <option value="30">Medium</option>
+                <option value="50">Large</option>
+            </select>
+        </div>
+    </div>
+    
+    <canvas id="graphpaper" ></canvas>
 </body>
 </html>
